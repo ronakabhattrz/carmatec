@@ -1,0 +1,453 @@
+.footer{
+	padding-top: 0px;
+	background-color: #F8F6F7;
+	@include breakpoint(1024px){
+		padding-top: 40px;
+	}
+	p{
+		font-family: "Poppins-Regular";
+		font-size: 14px;
+		color: #777777;
+	}
+}
+.footer-top{
+	margin-top: 0px;
+	background-color: #292929;
+	padding-top: 50px;
+	padding-bottom: 15px;
+}
+.footer-logo{
+	display: block;
+	position: relative;
+	margin-top: -17px;
+}
+h4.footer_headings{
+	font-family: "Poppins-Medium";
+	font-size: 18px;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+	color: #B8B8B8;
+}
+.footer-colmn{
+	h4.footer_headings{
+		margin-bottom: 15px;
+	}
+	.footer-logo {
+		margin-bottom: 15px;
+	}
+}
+.helpdesk{
+	display: block;
+	outline: 0;
+	position: relative;
+	padding: 15px 0px;
+	margin: 10px 0px;
+	padding-right: 36px;
+	@media (max-width:1199px) and (min-width:992px) {
+		padding: 12px 0px;
+	}
+	.icon{
+		width: 80px;
+		position: absolute;
+		left: 0px;
+		top:0px;
+		height: 80px;
+		background-color: #292929;
+		border-radius: 100%;
+		border: 5px solid #373737;
+		line-height: 70px;
+		text-align: center;
+		@media (max-width:1199px) and (min-width:992px) {
+			width: 60px;
+			height: 60px;
+			line-height: 47px;
+		}
+		img{
+			display: inline;
+			@media (max-width:1199px) and (min-width:992px) {
+				width: 18px;
+			}
+		}
+	}
+	span{
+		font-family: "Poppins-Medium";
+		font-size: 18px;
+		text-transform: uppercase;
+		color: #B8B8B8;
+		display: block;
+		padding-left: 90px;
+		width: 100%;
+		background-color: #373737;
+		border-radius: 25px;
+		line-height: 50px;
+		@media (max-width:1199px) and (min-width:992px) {
+			font-size: 12px;
+			color: #B8B8B8;
+			padding-left: 65px;
+			line-height: 35px;
+		}
+	}
+
+}
+.contacts{
+	padding-left: 20px;
+	position: relative;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	i{
+		color: #CE8B22;
+		position: absolute;
+		left: 0px;
+		top: 3px;
+		line-height: 1.42857;
+		font-size: 16px;
+	}
+	.highlight{
+		font-family: "Poppins-SemiBold";
+		color: #CE8B22;
+	}
+}
+.footer-bottom{
+	background-color: #1F1F1F;
+	padding: 15px 0px;
+	position: relative;
+	&:after{
+		content: "";
+		width: 1px;
+		height: 100%;
+		background-color: #585858;
+		margin-left: -1px;
+		left: 50%;
+		display: block;
+		position: absolute;
+		top: 0px;
+		@include breakpoint(991px){
+			display: none;
+		}
+	}
+}
+p.copyright{
+	margin-bottom: 0px;
+	line-height: 40px;
+	@include breakpoint(991px){
+		margin-top: 25px;
+		text-align: center;
+		border-bottom: 1px solid #3B3B3B;
+	}
+	a{
+		&:hover{
+			color: #CE8B22;
+		}
+	}
+}
+.footer-social{
+	margin: 0;
+	display: block;
+	padding: 0;
+	margin-left: -5px;
+	margin-right: -5px;
+	li{
+		float: left;
+		display: block;
+		margin: 0px 5px;
+		@include breakpoint(991px){
+			display: inline-block;
+			float: none;
+			vertical-align: middle;
+		}
+		@include breakpoint(480px){
+			margin: 0px 2px;
+		}
+		a{
+			background-color:#C0872D; 
+			color:#272928;
+			text-align: center;
+			display: block;
+			width: 40px;
+			height: 40px;
+			border-radius: 100%;
+			-webkit-border-radius: 100%;
+			line-height: 43px;
+			font-size: 20px;
+			padding-right: 2px;
+			@include breakpoint(480px){
+				width: 35px;
+				height: 35px;
+				line-height:38px;
+				font-size: 18px;	
+			}
+		}
+	}
+}
+
+.footer-payment-links{
+	margin: 0;
+	display: block;
+	padding: 0;
+	margin-left: -5px;
+	margin-right: -5px;
+	li{
+		float: left;
+		display: block;
+		margin: 0px 5px;
+		a{
+			background-color: transparent;
+			color: #777777;
+			font-family: "Poppins-Medium";
+			font-size: 14px;
+			text-transform: uppercase;
+			border: 0px solid #C0872D;
+			text-align: center;
+			display: block;
+			height: 40px;
+			line-height: 34px;
+			margin-bottom: 10px;
+			padding: 0px;
+			img{
+				display: inline;
+				max-height: 30px;
+			}
+			&.text{
+				border: 3px solid #C0872D;
+				text-align: center;
+				display: block;
+				padding: 0px 15px;
+				&:hover{
+					color: #CE8B22;
+				}
+			}
+		}
+	}
+}
+
+.footer-list-links{
+	margin: 0;
+	display: block;
+	float: left;
+	padding: 0;
+	margin-bottom: 15px;
+	li{
+		float: left;
+		width: 100%;
+		display: block;
+		padding-left: 20px;
+		position: relative;
+		a{
+			background-color:transparent; 
+			color: #777777;
+			display: block;
+			line-height: 100%;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			font-size: 14px;
+			&:hover{
+				color: #CE8B22;
+			}
+		}
+		&:before {
+		    content: "\f101";
+		    position: absolute;
+		    left: 0px;
+		    color: #CE8B22;
+		    top:0px;
+		    display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		    font-size: 16px;
+		    line-height: 28px;
+		}
+	}
+}
+.social-wrapper{
+	float: right;
+	position: relative;
+	padding-left: 91px;
+	@include breakpoint(991px){
+		padding-left: 0px;
+		width: 100%;
+		text-align: center;
+	}
+	.followus-text{
+		font-family: "Poppins-Medium";
+		font-size: 14px;
+		color: #5D5D5D;
+		line-height: 40px;
+		position: absolute;
+		left: 0px;
+		top:0px;
+		@include breakpoint(991px){
+			position: relative;
+		}
+	}
+}
+
+.go-up{
+	height: 0px;
+	min-height: 0px;
+}
+.go-up-arrow{
+	height: 50px;
+	width: 50px;
+	display: block;
+	background-color: #E99E1F;
+	color: #ffffff;
+	z-index: 1;
+	position: relative;
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	margin: 0 auto;
+	margin-top: -40px;
+	span{
+		text-align: center;
+		position: relative;
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		div{
+			font-family: "Poppins-Regular";
+			font-size: 14px;
+	    	color: #ffffff;
+	    	text-transform: uppercase;
+		}
+	    i{
+	    	font-size: 20px;
+	    	color: #ffffff;
+			position: relative;
+			z-index: 1;
+	    }
+	}
+}
+
+
+.footer-feartures{
+	@include breakpoint(1024px){
+		margin-bottom: 60px;
+	}
+	.features{
+		position: relative;
+		padding: 25px 15px 25px 100px;
+		@include breakpoint(1199px){
+			padding-left: 80px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		@include breakpoint(991px){
+			padding-left: 50px;
+		}
+		@include breakpoint(767px){
+			padding-left: 35px;
+		}
+		@include breakpoint(560px){
+			padding: 15px 0px;
+			text-align: center;
+		}
+		div.img{
+			position: absolute;
+			display:block;
+			width: 100px;
+			text-align: center;
+			line-height: 150px;
+			left: 0px;
+			top:0px;
+			@include breakpoint(1199px){
+				line-height: 140px;
+				width: 80px;
+			}
+			@include breakpoint(991px){
+				width: 35px;
+			}
+			@include breakpoint(767px){
+				width: 25px;
+			}
+			@include breakpoint(560px){
+				position: relative;
+				line-height: 100%;
+				display: inline-block;
+				margin-bottom: 8px;
+			}
+			img{
+				display: inline;
+			}
+		}
+		.feature-heading{
+			font-family: "Poppins-Medium";
+			font-size: 30px;
+			margin-top: 0px;
+			text-transform: uppercase;
+			line-height: 80%;
+			@include breakpoint(1199px){
+				font-size: 22px;
+			}
+			@include breakpoint(991px){
+				font-size: 18px;
+				line-height: 100%;
+				margin-bottom: 0px;
+			}
+			@include breakpoint(991px){
+				font-size: 14px;
+			}
+			@include breakpoint(460px){
+				font-size: 10px;
+			}
+		}
+		p{
+			font-family: "Poppins-Light";
+			font-size: 14px;
+			margin-bottom: 0px;
+			@include breakpoint(1199px){
+				font-size: 13px;
+			}
+			@include breakpoint(991px){
+				display: none;
+			}
+		}
+	}
+
+	.secure-payment{
+		background-color: #4D4D4D;
+		.feature-heading{
+			color: #E8E8E8;
+		}
+		p{
+			color: #E8E8E8;
+		}
+	}
+	.help-center{
+		background-color: #E99E1F;
+		.feature-heading{
+			color: #FEFEFC;
+		}
+		p{
+			color: #FEFEFC;
+		}
+	}
+	.shop-on-go{
+		background-color: #EEEEEE;
+		.feature-heading{
+			color: #4D4D4D;
+		}
+		p{
+			color: #4D4D4D;
+		}
+	}
+
+}
+
+.home-page{
+	.footer{
+		padding-top: 70px;
+	}
+	.footer-top {
+	    margin-top: -60px;
+	    padding-top: 130px;
+	}
+}

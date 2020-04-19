@@ -1,0 +1,19 @@
+/* variables */
+
+
+$primary-color : #FBB031;
+$secondary-color : #E89D24;
+
+/* mixins */
+
+@mixin breakpoint($max) {
+	@media (max-width: $max) {
+		@content;
+	}
+}
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}  
+}

@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/*
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
+	-webkit-backface-visibility: hidden;
+}
+
+.post-hidden{
+	opacity: 0;
+}
+
+.post-visible{
+	opacity: 1;
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+
+/* animation */
+.ink {
+  display: block;
+  position: absolute;
+  background: #FCD593;
+  border-radius: 100%;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+}
+.ripple.white{
+  .ink{
+     background: #ffffff;
+  }
+}
+
+.fade-out {
+  transform: opacity(0);
+  -webkit-transform: opacity(0);
+  -moz-transform: opacity(0);
+}
+
+
+/* animation effect keyframes */
+
+.ink.animate {
+  animation: ripple 0.65s forwards;
+  -webkit-animation:ripple 0.65s forwards; /* For Chrome & Safari/Webkit based browser */
+  -moz-animation:ripple 0.65s forwards; /* For Mozilla Firefox */
+}
+
+.ink.animate.end {
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(255, 0, 0, 0.0);
+  box-shadow: none;
+  border-radius: 100%;
+}
+@-webkit-keyframes ripple{
+  100% {
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+
+  }
+}
+@-moz-keyframes ripple{
+  100% {
+    -moz-transform: scale(2.5);
+    transform: scale(2.5);
+
+  }
+}
+
+@keyframes ripple {
+  /*scale the element to 250% to safely cover the entire link and fade it out*/
+  100% {
+    transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+  }
+}
+
+
+
+@-webkit-keyframes bounce_infinite {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50%{
+  	transform: translateY(5px);
+  }
+}
+@keyframes bounce_infinite {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50%{
+  	transform: translateY(5px);
+  }
+}
+.bounce-infinite {
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: bounce_infinite;
+  animation-name: bounce_infinite;
+}
+
+@-webkit-keyframes zooming_infinite {
+   0%, 100% {
+    transform: scale(1);
+  }
+  33.33% {
+    transform: scale(1.2);
+  }
+  66.66%{
+  	transform: scale(.5);
+  }
+}
+@keyframes zooming_infinite {
+  0%, 100% {
+    transform: scale(1);
+  }
+  33.33% {
+    transform: scale(1.05);
+  }
+  66.66%{
+  	transform: scale(.95);
+  }
+}
+.zooming-infinite {
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: zooming_infinite;
+  animation-name: zooming_infinite;
+}
+
+.ripple{
+  position: relative;
+}
+
+
+@-webkit-keyframes slidein-left {
+  from {
+    width: 0%; 
+  }
+
+  to {
+    width: 100%;
+  }
+}
+@keyframes slidein-left {
+  from {
+    width: 0%; 
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.ds-default-line-wrapper.animated{
+  -webkit-animation-duration: 1.9s;
+  animation-duration:1.9s;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-timing-function: cubic-bezier(.04,.2,.11,.93);
+  -webkit-animation-name: slidein-left;
+  animation-name: slidein-left;
+}
