@@ -69,5 +69,5 @@ end
 p_skus = [["W1SSCW","10"], ["W1SSDW","100"], ["T1SSCW","90"], ["W1CDSCW","59"], ["WDKSCW","19"], ["L1KSCW","99"], ["W1SLOCW","100"],["W1SSCW","100"]]
 
 Product.all.each_with_index do |product, index|
-	
+	product.sku.new(sku: p_skus[0].first + 1.to_s)
 end
